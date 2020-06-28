@@ -3,7 +3,7 @@
   <con:settings>
     <con:setting id="d3dd76e3-b5cc-4dd5-88a3-a3cedda29b01fileName">https%3A%2F%2Freqres.in</con:setting>
   </con:settings>
-  <con:definitionCache/>
+  <con:definitionCache type="TEXT" rootPart=""/>
   <con:endpoints>
     <con:endpoint>https://reqres.in</con:endpoint>
   </con:endpoints>
