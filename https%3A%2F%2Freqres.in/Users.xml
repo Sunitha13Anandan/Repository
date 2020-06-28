@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Users" path="/api/users" id="c1837f5a-a7ac-4b88-9341-12a468c45c95" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="c1837f5a-a7ac-4b88-9341-12a468c45c95fileName">Users</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Users" id="657cb634-b854-4f0a-9bdb-f17dccdcb6eb" method="GET">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter required="true">
+        <con:name>page</con:name>
+        <con:value>2</con:value>
+        <con:style>QUERY</con:style>
+        <con:default>2</con:default>
+        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>200</con:status>
+      <con:params/>
+      <con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="e9fbada3-0e9f-4367-8c89-f0580f335404" mediaType="application/json">
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
+      <con:endpoint>https://reqres.in</con:endpoint>
+      <con:request/>
+      <con:originalUri>https://reqres.in/api/users</con:originalUri>
+      <con:credentials>
+        <con:authType>No Authorization</con:authType>
+      </con:credentials>
+      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+      <con:parameters>
+        <con:entry key="page" value="2"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>page</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>
