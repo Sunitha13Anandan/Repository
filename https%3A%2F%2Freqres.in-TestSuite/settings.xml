@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="acdd3f0a-61fa-4dbe-bf97-03d9d26e1207" name="https://reqres.in TestSuite" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="acdd3f0a-61fa-4dbe-bf97-03d9d26e1207fileName">https%3A%2F%2Freqres.in-TestSuite</con:setting>
+  </con:settings>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

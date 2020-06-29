@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b960f927-e220-4b2b-aacb-48947d833e22" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b960f927-e220-4b2b-aacb-48947d833e22fileName">https%3A%2F%2Freqres.in-TestCase-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="cd083bd4-684e-4cc6-9e93-f731a98f3d27">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users" methodName="Users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="a0141c09-bfea-4b65-86d5-19cbf40883c1" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="2b121a34-0062-4768-a777-6f5fc4887446" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Response SLA Assertion" id="0e879d30-1bf0-4ede-9807-1c193022898b" name="Response SLA">
+          <con:configuration>
+            <SLA>200</SLA>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
