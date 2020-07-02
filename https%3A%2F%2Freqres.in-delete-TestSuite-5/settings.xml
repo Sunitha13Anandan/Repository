@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="4e4d5e24-e645-48c2-ae47-35cf60ec0f8b" name="https://reqres.in delete TestSuite 5" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="4e4d5e24-e645-48c2-ae47-35cf60ec0f8bfileName">https%3A%2F%2Freqres.in-delete-TestSuite-5</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testSuite id="2932e7df-b4ff-443a-98a5-26a52ceb64bd" name="https://reqres.in update TestSuite 4" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2932e7df-b4ff-443a-98a5-26a52ceb64bdfileName">https%3A%2F%2Freqres.in-update-TestSuite-4</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:runType>SEQUENTIAL</con:runType>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testSuite>

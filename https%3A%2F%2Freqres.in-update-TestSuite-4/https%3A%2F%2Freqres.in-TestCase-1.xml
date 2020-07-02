@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="ecc5771f-e4f8-4fac-945d-5e3c57c0c356" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="ecc5771f-e4f8-4fac-945d-5e3c57c0c356fileName">https%3A%2F%2Freqres.in-TestCase-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="35393eb8-87ed-415e-a7e4-58944702cb5d">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users/" methodName="update user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="f58c7954-2b49-4e48-9eb1-7650ca0804c6" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="4a54c501-a73c-4e4e-9837-97e8fc283df6" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-type" value="application/json"/>
+          <con:entry key="id" value="${#[https://reqres.in TestSuite#https://reqres.in TestCase 1 Register Successful#Request 1]#Response}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>content-type</con:entry>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

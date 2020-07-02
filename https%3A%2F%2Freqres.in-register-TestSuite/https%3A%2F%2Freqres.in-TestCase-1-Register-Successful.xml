@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="b237127d-5abc-4852-a0b7-38481fc1240a" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in TestCase 1 Register Successful" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="b237127d-5abc-4852-a0b7-38481fc1240afileName">https%3A%2F%2Freqres.in-TestCase-1-Register-Successful</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="Request 1" id="b9998f5d-10f3-4e61-8c20-58567462bbef">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/register" methodName="Register" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="92ba3f8a-8da5-4043-ab40-a8c14002f1a3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/register</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="889ea22d-c2ff-4369-a4e6-57eb84708c7d" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

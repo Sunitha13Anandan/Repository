@@ -1,52 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="2" path="/api/users?2" id="1574ceea-bf82-4887-86cc-7318561ff2d9" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="2" path="/api/users/" id="8b4f8923-faad-44d9-9b04-278f4db1feac" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="1574ceea-bf82-4887-86cc-7318561ff2d9fileName">2</con:setting>
+    <con:setting id="8b4f8923-faad-44d9-9b04-278f4db1feacfileName">2</con:setting>
   </con:settings>
-  <con:parameters/>
-  <con:method name="2" id="dd7afd93-72ba-4a68-9f98-caaabbdc0ba4" method="GET">
+  <con:parameters>
+    <con:parameter>
+      <con:name>id</con:name>
+      <con:style>QUERY</con:style>
+    </con:parameter>
+  </con:parameters>
+  <con:method name="update user" id="f7866cbb-61bb-415c-8dac-d98e18747b18" method="PUT">
     <con:settings/>
-    <con:parameters/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>content-type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>application/json</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
     <con:representation type="RESPONSE">
       <con:mediaType>application/json; charset=utf-8</con:mediaType>
       <con:status>200</con:status>
       <con:params/>
-      <con:element xmlns:ns="https://reqres.in/api/users/2">ns:Response</con:element>
+      <con:element xmlns:user="https://reqres.in/api/users/">user:Response</con:element>
     </con:representation>
-    <con:representation type="FAULT">
-      <con:mediaType>application/json; charset=utf-8</con:mediaType>
-      <con:status>404</con:status>
-      <con:params/>
-      <con:element>Fault</con:element>
-    </con:representation>
-    <con:representation type="RESPONSE">
-      <con:mediaType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-      <con:status>0</con:status>
-      <con:params/>
-      <con:element>data</con:element>
-    </con:representation>
-    <con:request name="Request 1" id="d07e4946-2a85-4465-9922-20b9075031e5" mediaType="application/json">
+    <con:request name="Request 1" id="f58c7954-2b49-4e48-9eb1-7650ca0804c6" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
       </con:settings>
       <con:endpoint>https://reqres.in</con:endpoint>
-      <con:request/>
-      <con:originalUri>https://reqres.in/api/users/morpheus</con:originalUri>
+      <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}</con:request>
+      <con:originalUri>https://reqres.in/api/users/</con:originalUri>
       <con:credentials>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
-    </con:request>
-    <con:request name="REST Request" id="5ee3c25b-5d08-4081-a520-461cc0e22bea" mediaType="application/json">
-      <con:settings/>
-      <con:endpoint>https://reqres.in</con:endpoint>
-      <con:request/>
-      <con:credentials>
-        <con:authType>No Authorization</con:authType>
-      </con:credentials>
-      <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="content-type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>content-type</con:entry>
+        <con:entry>id</con:entry>
+      </con:parameterOrder>
     </con:request>
   </con:method>
 </con:resource>
