@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:resource name="Users 1" path="/api/users" id="5a319494-d29a-430a-b131-ab09dbb310cd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="5a319494-d29a-430a-b131-ab09dbb310cdfileName">Users-1</con:setting>
+  </con:settings>
+  <con:parameters/>
+  <con:method name="Users 1" id="b901ac39-7486-4ca9-8f5d-6daccb3a9cec" method="POST">
+    <con:settings/>
+    <con:parameters>
+      <con:parameter>
+        <con:name>content-type</con:name>
+        <con:value>application/json</con:value>
+        <con:style>HEADER</con:style>
+        <con:default>application/json</con:default>
+      </con:parameter>
+    </con:parameters>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/json</con:mediaType>
+      <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>201</con:status>
+      <con:params/>
+      <con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element>
+    </con:representation>
+    <con:request name="Request 1" id="2ad48ba5-bf8c-4117-8bdf-b3942cff9472" mediaType="application/json">
+      <con:settings/>
+      <con:endpoint>https://reqres.in</con:endpoint>
+      <con:request>{
+    "name": "morpheus",
+    "job": "leader"
+}</con:request>
+      <con:parameters>
+        <con:entry key="content-type" value="application/json"/>
+      </con:parameters>
+      <con:parameterOrder>
+        <con:entry>content-type</con:entry>
+      </con:parameterOrder>
+    </con:request>
+  </con:method>
+</con:resource>

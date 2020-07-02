@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Users" path="/api/users" id="f86f5d50-c22b-441f-a658-13598eee18c1" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Users" path="/api/users" id="f86f5d50-c22b-441f-a658-13598eee18c1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f86f5d50-c22b-441f-a658-13598eee18c1fileName">Users</con:setting>
   </con:settings>
-  <con:parameters/>
+  <con:parameters>
+    <con:parameter>
+      <con:name>id</con:name>
+      <con:value/>
+      <con:style>TEMPLATE</con:style>
+      <con:default/>
+    </con:parameter>
+  </con:parameters>
   <con:method name="Get single user by id" id="ce4c5609-ca2b-46e7-899f-87df237a3e9a" method="GET">
     <con:settings/>
     <con:parameters>
       <con:parameter required="true">
         <con:name>id</con:name>
         <con:value/>
-        <con:style>QUERY</con:style>
+        <con:style>TEMPLATE</con:style>
         <con:default/>
       </con:parameter>
     </con:parameters>
@@ -43,10 +50,13 @@
 }</con:request>
       <con:originalUri>https://reqres.in/api/users/</con:originalUri>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-      <con:parameters/>
+      <con:parameters>
+        <con:entry key="id" value="6"/>
+      </con:parameters>
       <con:parameterOrder>
         <con:entry>id</con:entry>
       </con:parameterOrder>
@@ -60,8 +70,8 @@
         <con:value>2</con:value>
         <con:style>QUERY</con:style>
         <con:default>2</con:default>
-        <con:path xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
-        <con:description xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+        <con:path xsi:nil="true"/>
+        <con:description xsi:nil="true"/>
       </con:parameter>
     </con:parameters>
     <con:representation type="RESPONSE">
@@ -70,22 +80,34 @@
       <con:params/>
       <con:element xmlns:user="https://reqres.in/api/users">user:Response</con:element>
     </con:representation>
+    <con:representation type="FAULT">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>404</con:status>
+      <con:params/>
+      <con:element>Fault</con:element>
+    </con:representation>
     <con:request name="Request 1" id="130b5047-8b37-4f51-878a-a4ae89b63843" mediaType="application/json">
-      <con:settings/>
+      <con:settings>
+        <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+      </con:settings>
       <con:endpoint>https://reqres.in</con:endpoint>
       <con:request>{
     "email": "eve.holt@reqres.in",
     "password": "pistol"
 }</con:request>
+      <con:originalUri>https://reqres.in/api/users</con:originalUri>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters>
         <con:entry key="page" value="2"/>
+        <con:entry key="id" value=""/>
       </con:parameters>
       <con:parameterOrder>
         <con:entry>page</con:entry>
+        <con:entry>id</con:entry>
       </con:parameterOrder>
     </con:request>
   </con:method>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="2 1" path="/api/users/" id="731dc467-bbfd-492c-99ed-fccb74059dd3" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="2 1" path="/api/users" id="731dc467-bbfd-492c-99ed-fccb74059dd3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="731dc467-bbfd-492c-99ed-fccb74059dd3fileName">2-1</con:setting>
   </con:settings>
   <con:parameters>
     <con:parameter>
-      <con:name>id</con:name>
+      <con:name>name</con:name>
       <con:style>QUERY</con:style>
     </con:parameter>
   </con:parameters>
@@ -13,7 +13,7 @@
     <con:settings/>
     <con:parameters/>
     <con:representation type="RESPONSE">
-      <con:mediaType xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/>
+      <con:mediaType xsi:nil="true"/>
       <con:status>204</con:status>
       <con:params/>
       <con:element>data</con:element>
@@ -21,6 +21,12 @@
     <con:representation type="REQUEST">
       <con:mediaType>application/json</con:mediaType>
       <con:params/>
+    </con:representation>
+    <con:representation type="RESPONSE">
+      <con:mediaType>application/json; charset=utf-8</con:mediaType>
+      <con:status>201 200</con:status>
+      <con:params/>
+      <con:element xmlns:user="https://reqres.in/api/users/">user:Response</con:element>
     </con:representation>
     <con:request name="Request 1" id="1320aa88-8c72-4cdc-b329-7a75b7a4d4e0" mediaType="application/json" postQueryString="false">
       <con:settings>
@@ -30,12 +36,13 @@
       <con:request/>
       <con:originalUri>https://reqres.in/api/users/</con:originalUri>
       <con:credentials>
+        <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
         <con:authType>No Authorization</con:authType>
       </con:credentials>
       <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
       <con:parameters/>
       <con:parameterOrder>
-        <con:entry>id</con:entry>
+        <con:entry>name</con:entry>
       </con:parameterOrder>
     </con:request>
   </con:method>

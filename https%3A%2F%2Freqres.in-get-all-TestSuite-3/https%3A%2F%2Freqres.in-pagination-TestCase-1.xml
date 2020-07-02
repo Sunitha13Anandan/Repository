@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:testCase id="21a14df8-6ee3-46ab-a7ed-3b4de83b7029" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+<con:testCase id="21a14df8-6ee3-46ab-a7ed-3b4de83b7029" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in pagination TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
-    <con:setting id="21a14df8-6ee3-46ab-a7ed-3b4de83b7029fileName">https%3A%2F%2Freqres.in-TestCase-1</con:setting>
+    <con:setting id="21a14df8-6ee3-46ab-a7ed-3b4de83b7029fileName">https%3A%2F%2Freqres.in-pagination-TestCase-1</con:setting>
   </con:settings>
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="Request 1" id="a7b20a34-168d-4a0b-92b7-78c6e397ac08">
@@ -30,9 +30,11 @@
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
           <con:entry key="page" value="2"/>
+          <con:entry key="id" value="${#[https://reqres.in TestSuite 4#https://reqres.in TestCase 1#Request 1]#Response#$['id']}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>page</con:entry>
+          <con:entry>id</con:entry>
         </con:parameterOrder>
       </con:restRequest>
     </con:config>

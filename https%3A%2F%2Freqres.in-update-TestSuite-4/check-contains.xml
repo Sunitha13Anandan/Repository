@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="98284844-b9d2-46d9-aac5-3bb3cccef8f1" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="check contains" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="98284844-b9d2-46d9-aac5-3bb3cccef8f1fileName">check-contains</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="REST Request" id="495ddaea-7723-4e60-b6c5-ea4bc8c367a3">
+    <con:settings/>
+    <con:config service="https://reqres.in" methodName="update user" resourcePath="/api/users/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="e82e4fdc-7c1e-41e3-9783-a50bc4f0dde9" mediaType="application/json" postQueryString="false">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="99fdeb97-8252-4b1b-9b0b-33fc097b7d13" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Simple Contains" id="61f707c0-b7e2-43f5-8791-2fcf7371d46e" name="Contains">
+          <con:configuration>
+            <token>id</token>
+            <ignoreCase>true</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-type" value="application/json"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

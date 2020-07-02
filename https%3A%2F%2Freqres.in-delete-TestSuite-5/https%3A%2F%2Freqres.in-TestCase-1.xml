@@ -3,9 +3,10 @@
   <con:settings>
     <con:setting id="50e0a973-92dd-4a3e-9d3e-0d89b7f9543efileName">https%3A%2F%2Freqres.in-TestCase-1</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="Request 1" id="ca451082-0673-4aa0-b7e0-bd55711a6fd8">
     <con:settings/>
-    <con:config service="https://reqres.in" resourcePath="/api/users/" methodName="delete user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="https://reqres.in" resourcePath="/api/users" methodName="delete user" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Request 1" id="1320aa88-8c72-4cdc-b329-7a75b7a4d4e0" mediaType="application/json" postQueryString="false">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -24,7 +25,9 @@
           <con:authType>No Authorization</con:authType>
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
-        <con:parameters/>
+        <con:parameters>
+          <con:entry key="id" value="${#[https://reqres.in register TestSuite#https://reqres.in TestCase 1 Register Successful#Request 1]#Response}"/>
+        </con:parameters>
         <con:parameterOrder>
           <con:entry>id</con:entry>
         </con:parameterOrder>

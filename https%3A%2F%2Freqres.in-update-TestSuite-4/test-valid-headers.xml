@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="389f5ab7-2fff-4be7-bf9c-5316c216f6d7" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="test valid headers" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="389f5ab7-2fff-4be7-bf9c-5316c216f6d7fileName">test-valid-headers</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="restrequest" name="REST Request" id="b7f4aae3-7b63-4ca8-ac01-88919500b23f">
+    <con:settings/>
+    <con:config service="https://reqres.in" methodName="update user" resourcePath="/api/users/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="1d4d7bef-440c-4bfe-879e-5bcf93ca1233" mediaType="application/json" postQueryString="false">
+        <con:settings/>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="17088a19-920e-4d70-9edd-c68473bb3941" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="HTTP Header Equals" id="2b76cfac-b7f6-4d7d-b5c0-bea32debe861" name="HTTP Header Equals">
+          <con:configuration>
+            <Header>content-type</Header>
+            <Value>application/json</Value>
+            <ignoreCase>true</ignoreCase>
+            <useRegEx>false</useRegEx>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-type" value="application/json"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

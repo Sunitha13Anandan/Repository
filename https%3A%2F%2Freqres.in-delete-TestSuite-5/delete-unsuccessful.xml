@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="2df3e27d-5901-4e2f-938e-c18f03ff5441" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="delete unsuccessful" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="2df3e27d-5901-4e2f-938e-c18f03ff5441fileName">delete-unsuccessful</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="a1f0a051-b31c-49f4-80f1-6b2d628cdf43">
+    <con:settings/>
+    <con:config service="https://reqres.in" methodName="delete user" resourcePath="/api/users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="a215c02d-212b-4620-85f3-5f8393742226" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:assertion type="Valid HTTP Status Codes" id="5f4fc286-0c44-4a31-bc76-feaf410330d0" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>404</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="Invalid HTTP Status Codes" id="8fb821bf-2e10-43bf-92eb-f13755820486" name="Invalid HTTP Status Codes">
+          <con:configuration>
+            <codes>400,404</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

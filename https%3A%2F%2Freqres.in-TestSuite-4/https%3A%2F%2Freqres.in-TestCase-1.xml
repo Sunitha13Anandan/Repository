@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="83343a1e-1ccd-4c46-95ae-b0bb50524c6c" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="https://reqres.in TestCase 1" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="83343a1e-1ccd-4c46-95ae-b0bb50524c6cfileName">https%3A%2F%2Freqres.in-TestCase-1</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="Request 1" id="c7c84014-bf0f-45e7-aff6-762af3d7f3d3">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/users" methodName="Users 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="Request 1" id="2ad48ba5-bf8c-4117-8bdf-b3942cff9472" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "name": "morpheus",
+    "job": "leader"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/users</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="17ade826-2dd1-4dfa-8103-8a69fc8ef8ff" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>201</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-type" value="application/json"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>content-type</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>
