@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="def9fa23-c9ab-4c05-b320-37aa27df3f60fileName">form-req</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="REST Request" id="f9b593ed-9d82-4970-96f2-ce69337f2306">
     <con:settings/>
     <con:config service="https://reqres.in" methodName="Users 1" resourcePath="/api/users" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">

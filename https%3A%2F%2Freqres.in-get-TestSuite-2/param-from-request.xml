@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="d9b0da56-1c74-44da-ab9b-ef9043dbd69b" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="param from request" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="d9b0da56-1c74-44da-ab9b-ef9043dbd69bfileName">param-from-request</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="752d5ee7-4769-4268-8268-1ecc38156aae">
+    <con:settings/>
+    <con:config service="https://reqres.in" methodName="get user by pagination" resourcePath="/api/users/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="88ffaa42-8251-48a4-8e67-4b5dc33f6987" mediaType="application/json">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="5868e403-c627-4ea0-96ab-9747aa47ab53" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="page" value="2"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

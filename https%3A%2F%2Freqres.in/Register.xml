@@ -23,6 +23,10 @@
       <con:params/>
       <con:element xmlns:reg="https://reqres.in/api/register">reg:Fault</con:element>
     </con:representation>
+    <con:representation type="REQUEST">
+      <con:mediaType>application/x-www-form-urlencoded</con:mediaType>
+      <con:params/>
+    </con:representation>
     <con:request name="Request 1" id="92ba3f8a-8da5-4043-ab40-a8c14002f1a3" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="e9d5e3f1-eeb8-4aa8-b023-d991383136a8" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="contain valid json format" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="e9d5e3f1-eeb8-4aa8-b023-d991383136a8fileName">contain-valid-json-format</con:setting>
+  </con:settings>
+  <con:testStep type="restrequest" name="REST Request" id="bcdfcf66-ce3b-41ce-b28f-7c47c83ff014">
+    <con:settings/>
+    <con:config service="https://reqres.in" resourcePath="/api/register" methodName="Register" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="92ba3f8a-8da5-4043-ab40-a8c14002f1a3" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+          <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">All</con:setting>
+        </con:settings>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request>{
+    "email": "eve.holt@reqres.in",
+    "password": "pistol"
+}</con:request>
+        <con:originalUri>https://reqres.in/api/register</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="70cbae21-319e-4b8b-9680-21e79aca3584" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:assertion type="GroovyScriptAssertion" id="e7179242-3411-4803-ade0-4cd50a3729b1" name="Script Assertion">
+          <con:configuration>
+            <scriptText>import groovy.json.JsonSlurper
+ 
+def ResponseMessage = messageExchange.response.responseContent
+
+def jsonSlurper = new JsonSlurper().parseText(ResponseMessage)
+ 
+
+assert !(jsonSlurper.isEmpty())
+ 
+assert jsonSlurper.Id != 0</scriptText>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters/>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

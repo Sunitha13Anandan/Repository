@@ -11,7 +11,10 @@
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
         </con:settings>
         <con:endpoint>https://reqres.in</con:endpoint>
-        <con:request/>
+        <con:request>{
+    "name": "morpheus",
+    "job": "zion resident"
+}</con:request>
         <con:originalUri>https://reqres.in/api/users/</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="4a54c501-a73c-4e4e-9837-97e8fc283df6" name="Valid HTTP Status Codes">
           <con:settings/>
@@ -25,12 +28,12 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
+          <con:entry key="name" value="${#[https://reqres.in TestSuite#https://reqres.in TestCase 1 Register Successful#Request 1]#Response}"/>
           <con:entry key="content-type" value="application/json"/>
-          <con:entry key="id" value="${#[https://reqres.in TestSuite#https://reqres.in TestCase 1 Register Successful#Request 1]#Response}"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>content-type</con:entry>
-          <con:entry>id</con:entry>
+          <con:entry>name</con:entry>
         </con:parameterOrder>
       </con:restRequest>
     </con:config>

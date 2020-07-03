@@ -14,6 +14,7 @@
         <con:encoding>UTF-8</con:encoding>
         <con:endpoint>https://reqres.in</con:endpoint>
         <con:request/>
+        <con:originalUri>https://reqres.in/api/users/</con:originalUri>
         <con:assertion type="Valid HTTP Status Codes" id="8ae9e04a-0ba1-4d14-ad74-98ee239b39e2" name="Valid HTTP Status Codes">
           <con:settings/>
           <con:configuration>

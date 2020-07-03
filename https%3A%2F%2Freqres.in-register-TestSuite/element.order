@@ -1,4 +1,4 @@
 https%3A%2F%2Freqres.in-TestCase-1-Register-Successful.xml
 TestCase-2-Register-unsuccessful.xml
 verify-response-payload.xml
-check-got-valid-element-in-response.xml
+contain-valid-json-format.xml
