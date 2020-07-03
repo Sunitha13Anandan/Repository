@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:resource name="Users" path="/api/users" id="f86f5d50-c22b-441f-a658-13598eee18c1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
+<con:resource name="Users" path="/api/users/{id}" id="f86f5d50-c22b-441f-a658-13598eee18c1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:con="http://eviware.com/soapui/config">
   <con:settings>
     <con:setting id="f86f5d50-c22b-441f-a658-13598eee18c1fileName">Users</con:setting>
   </con:settings>

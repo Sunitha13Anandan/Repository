@@ -26,6 +26,7 @@
     <con:request name="Request 1" id="92ba3f8a-8da5-4043-ab40-a8c14002f1a3" mediaType="application/json" postQueryString="false">
       <con:settings>
         <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        <con:setting id="com.eviware.soapui.support.editor.views.xml.form2.FormEditorView@ViewType">All</con:setting>
       </con:settings>
       <con:endpoint>https://reqres.in</con:endpoint>
       <con:request>{
