@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="87bd0c7f-f86b-48b0-95e6-e9cfd14c8daa" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="data diven with data generator" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="87bd0c7f-f86b-48b0-95e6-e9cfd14c8daafileName">data-diven-with-data-generator</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="datasource" name="DataSource for data gen" id="9cb69cfa-9e86-4328-bda5-a57e04750047">
+    <con:settings/>
+    <con:config xsi:type="con:DataSourceStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:dataSource type="Data Generator">
+        <con:configuration>
+          <generatedDataCount>10</generatedDataCount>
+          <generatorsTotalNumber>1</generatorsTotalNumber>
+          <lastSelectedProperty>0</lastSelectedProperty>
+          <GeneratorType0>INT</GeneratorType0>
+          <PropertyName0>id</PropertyName0>
+          <repetitionCountid>0</repetitionCountid>
+          <repeatValuesid>false</repeatValuesid>
+          <IntegerDataGeneratorMinValueid>1</IntegerDataGeneratorMinValueid>
+          <IntegerDataGeneratorMaxValueid>10</IntegerDataGeneratorMaxValueid>
+          <IntegerDataGeneratorStepValueid>1</IntegerDataGeneratorStepValueid>
+          <IntegerDataGeneratorConsequentValuesid>false</IntegerDataGeneratorConsequentValuesid>
+          <escapeSpaceSequence/>
+        </con:configuration>
+      </con:dataSource>
+      <con:shared>true</con:shared>
+      <con:restartShared>true</con:restartShared>
+      <con:property>id</con:property>
+      <con:restartOnRun>true</con:restartOnRun>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="8d58ee5a-ef6a-49e5-8cd6-5ed7a5cf1021">
+    <con:settings/>
+    <con:config service="https://reqres.in" methodName="update user" resourcePath="/api/users/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="19f0764c-ca4d-421d-9e47-1d90a9c1a522" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="e6e22e13-8314-419d-a806-608ac356e577" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-type" value="application/json"/>
+          <con:entry key="id" value="${DataSource for data gen#id}"/>
+        </con:parameters>
+        <con:parameterOrder>
+          <con:entry>name</con:entry>
+          <con:entry>content-type</con:entry>
+          <con:entry>id</con:entry>
+        </con:parameterOrder>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

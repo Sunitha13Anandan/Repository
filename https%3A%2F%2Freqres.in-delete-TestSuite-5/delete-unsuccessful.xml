@@ -3,6 +3,7 @@
   <con:settings>
     <con:setting id="2df3e27d-5901-4e2f-938e-c18f03ff5441fileName">delete-unsuccessful</con:setting>
   </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="REST Request" id="a1f0a051-b31c-49f4-80f1-6b2d628cdf43">
     <con:settings/>
     <con:config service="https://reqres.in" methodName="reg" resourcePath="/api/users/{id}" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
@@ -31,7 +32,7 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="id" value="4"/>
+          <con:entry key="id" value="9"/>
         </con:parameters>
         <con:parameterOrder>
           <con:entry>id</con:entry>

@@ -14,7 +14,9 @@ https%3A%2F%2Freqres.in-get-all-TestSuite-3\https%3A%2F%2Freqres.in-pagination-T
 https%3A%2F%2Freqres.in-update-TestSuite-4\https%3A%2F%2Freqres.in-TestCase-1.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\test-valid-headers.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\check-contains.xml
+https%3A%2F%2Freqres.in-update-TestSuite-4\data-driven-test-with-random.xml
+https%3A%2F%2Freqres.in-update-TestSuite-4\data-diven-with-data-generator.xml
 https%3A%2F%2Freqres.in-delete-TestSuite-5\https%3A%2F%2Freqres.in-TestCase-1.xml
 https%3A%2F%2Freqres.in-delete-TestSuite-5\delete-unsuccessful.xml
-https%3A%2F%2Freqres.in-TestSuite-4\https%3A%2F%2Freqres.in-TestCase-1.xml
-https%3A%2F%2Freqres.in-TestSuite-4\form-req.xml
+https%3A%2F%2Freqres.in-create-TestSuite-4\https%3A%2F%2Freqres.in-TestCase-1.xml
+https%3A%2F%2Freqres.in-create-TestSuite-4\form-req.xml
