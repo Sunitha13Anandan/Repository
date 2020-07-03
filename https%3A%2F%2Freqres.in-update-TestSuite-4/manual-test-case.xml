@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:testCase id="8c6661c4-aceb-4214-a652-c32fc7637648" discardOkResults="false" failOnError="true" failTestCaseOnErrors="true" keepSession="false" name="manual test case" searchProperties="true" timeout="0" xmlns:con="http://eviware.com/soapui/config">
+  <con:settings>
+    <con:setting id="8c6661c4-aceb-4214-a652-c32fc7637648fileName">manual-test-case</con:setting>
+  </con:settings>
+  <con:savedRecentRuns>1</con:savedRecentRuns>
+  <con:testStep type="manualTestStep" name="Manual test case" id="afbcc638-b434-4485-aceb-bfa545519239">
+    <con:description>PUT operation with the is as parameter</con:description>
+    <con:settings/>
+    <con:config xsi:type="con:ManualTestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:expectedResult>200</con:expectedResult>
+    </con:config>
+  </con:testStep>
+  <con:testStep type="restrequest" name="REST Request" id="61b89273-dda4-4f5d-a73b-e9aca68398fe">
+    <con:settings/>
+    <con:config service="https://reqres.in" methodName="update user" resourcePath="/api/users/" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <con:restRequest name="REST Request" id="1cd05ce1-c054-4aa3-be71-4abb3cd765fb" mediaType="application/json" postQueryString="false">
+        <con:settings>
+          <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
+        </con:settings>
+        <con:encoding>UTF-8</con:encoding>
+        <con:endpoint>https://reqres.in</con:endpoint>
+        <con:request/>
+        <con:originalUri>https://reqres.in/api/users/</con:originalUri>
+        <con:assertion type="Valid HTTP Status Codes" id="e7ab42e0-8326-40e8-874a-08b8d77a6357" name="Valid HTTP Status Codes">
+          <con:settings/>
+          <con:configuration>
+            <codes>200</codes>
+          </con:configuration>
+        </con:assertion>
+        <con:credentials>
+          <con:selectedAuthProfile>No Authorization</con:selectedAuthProfile>
+          <con:authType>No Authorization</con:authType>
+        </con:credentials>
+        <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
+        <con:parameters>
+          <con:entry key="content-type" value="application/json"/>
+        </con:parameters>
+      </con:restRequest>
+    </con:config>
+  </con:testStep>
+  <con:properties/>
+  <con:reportParameters/>
+</con:testCase>

@@ -3,6 +3,7 @@ https%3A%2F%2Freqres.in\2.xml
 https%3A%2F%2Freqres.in\Register.xml
 https%3A%2F%2Freqres.in\Users-1.xml
 https%3A%2F%2Freqres.in\Users.xml
+SecurityTest-1.xml
 https%3A%2F%2Freqres.in-register-TestSuite\https%3A%2F%2Freqres.in-TestCase-1-Register-Successful.xml
 https%3A%2F%2Freqres.in-register-TestSuite\TestCase-2-Register-unsuccessful.xml
 https%3A%2F%2Freqres.in-register-TestSuite\verify-response-payload.xml
@@ -10,12 +11,14 @@ https%3A%2F%2Freqres.in-register-TestSuite\contain-valid-json-format.xml
 https%3A%2F%2Freqres.in-get-TestSuite-2\https%3A%2F%2Freqres.in-TestCase-1.xml
 https%3A%2F%2Freqres.in-get-TestSuite-2\Param-change.xml
 https%3A%2F%2Freqres.in-get-TestSuite-2\param-from-request.xml
+https%3A%2F%2Freqres.in-get-TestSuite-2\multiple-params.xml
 https%3A%2F%2Freqres.in-get-all-TestSuite-3\https%3A%2F%2Freqres.in-pagination-TestCase-1.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\https%3A%2F%2Freqres.in-TestCase-1.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\test-valid-headers.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\check-contains.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\data-driven-test-with-random.xml
 https%3A%2F%2Freqres.in-update-TestSuite-4\data-diven-with-data-generator.xml
+https%3A%2F%2Freqres.in-update-TestSuite-4\manual-test-case.xml
 https%3A%2F%2Freqres.in-delete-TestSuite-5\https%3A%2F%2Freqres.in-TestCase-1.xml
 https%3A%2F%2Freqres.in-delete-TestSuite-5\delete-unsuccessful.xml
 https%3A%2F%2Freqres.in-create-TestSuite-4\https%3A%2F%2Freqres.in-TestCase-1.xml

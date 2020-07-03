@@ -6,7 +6,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="Request 1" id="a7b20a34-168d-4a0b-92b7-78c6e397ac08">
     <con:settings/>
-    <con:config service="https://reqres.in" resourcePath="/api/users/{id}" methodName="get user by pagination" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="https://reqres.in" resourcePath="/api/users" methodName="get user by pagination" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Request 1" id="130b5047-8b37-4f51-878a-a4ae89b63843" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
@@ -29,12 +29,12 @@
         </con:credentials>
         <con:jmsConfig JMSDeliveryMode="PERSISTENT"/>
         <con:parameters>
-          <con:entry key="page" value="2"/>
+          <con:entry key="name" value=""/>
           <con:entry key="id" value="${#[https://reqres.in TestSuite 4#https://reqres.in TestCase 1#Request 1]#Response#$['id']}"/>
         </con:parameters>
         <con:parameterOrder>
-          <con:entry>page</con:entry>
           <con:entry>id</con:entry>
+          <con:entry>name</con:entry>
         </con:parameterOrder>
       </con:restRequest>
     </con:config>

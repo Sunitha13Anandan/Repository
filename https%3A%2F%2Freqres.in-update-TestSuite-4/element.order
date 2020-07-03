@@ -3,3 +3,4 @@ test-valid-headers.xml
 check-contains.xml
 data-driven-test-with-random.xml
 data-diven-with-data-generator.xml
+manual-test-case.xml

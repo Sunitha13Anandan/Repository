@@ -6,7 +6,7 @@
   <con:savedRecentRuns>1</con:savedRecentRuns>
   <con:testStep type="restrequest" name="Request 1" id="42df3dff-cb41-4777-b847-24b708d89467">
     <con:settings/>
-    <con:config service="https://reqres.in" resourcePath="/api/users/{id}" methodName="Get single user by id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <con:config service="https://reqres.in" resourcePath="/api/users" methodName="Get single user by id" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
       <con:restRequest name="Request 1" id="8c369af1-1c54-40e2-a37a-f19edd4b0145" mediaType="application/json">
         <con:settings>
           <con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting>
